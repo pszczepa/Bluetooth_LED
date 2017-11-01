@@ -5,6 +5,8 @@
 #include <QBluetoothDeviceDiscoveryAgent>
 #include <QBluetoothSocket>
 #include <QListWidget>
+#include <vector>
+#include <QVector>
 
 namespace Ui {
   class MainWindow;
@@ -19,15 +21,19 @@ public:
   ~MainWindow();
 
 private slots:
-  void on_push_find_clicked();
-
   void deviceDiscovered(const QBluetoothDeviceInfo &device);
+
+  void deviceConnected();
 
   void on_listWidget_itemClicked(QListWidgetItem *item);
 
   void on_push_Test_clicked();
 
   void on_push_Test_2_clicked();
+
+  void on_push_Test_3_clicked();
+
+  void on_push_connect_clicked();
 
 private:
   Ui::MainWindow *ui;
@@ -36,6 +42,9 @@ private:
   QBluetoothSocket *_socket;
 
   QString _device_address;
+  QString _device_name;
+
+  std::vector<QBluetoothDeviceInfo> _found_devices;
 };
 
 #endif // MAINWINDOW_HH
