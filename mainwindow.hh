@@ -5,8 +5,9 @@
 #include <QBluetoothDeviceDiscoveryAgent>
 #include <QBluetoothSocket>
 #include <QListWidget>
-#include <vector>
 #include <QVector>
+
+#include "bt_message.hh"
 
 namespace Ui {
   class MainWindow;
@@ -34,6 +35,8 @@ private slots:
   void on_push_Test_3_clicked();
 
   void on_push_connect_clicked();
+
+  void on_pushButton_9_clicked();
 
 private:
   Ui::MainWindow *ui;

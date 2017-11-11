@@ -23,8 +23,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &device)
 {
-   _found_devices.push_back(device);
-   ui->listWidget->addItem(device.name());
+  _found_devices.push_back(device);
+  ui->listWidget->addItem(device.name());
 }
 
 void MainWindow::deviceConnected()
@@ -51,7 +51,7 @@ void MainWindow::on_push_Test_2_clicked()
 
 void MainWindow::on_push_Test_3_clicked()
 {
-  _socket->write("1,255,255,255");
+  _socket->write(BT_Message(1,255,255,255).ReturnMessage());
 }
 
 
@@ -78,3 +78,8 @@ void MainWindow::on_push_connect_clicked()
 
 }
 
+
+void MainWindow::on_pushButton_9_clicked()
+{
+
+}

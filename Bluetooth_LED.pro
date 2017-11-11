@@ -27,11 +27,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    bt_message.cpp
+    bt_message.cpp \
+    bt_color.cpp
 
 HEADERS += \
         mainwindow.hh \
-    bt_message.hh
+    bt_message.hh \
+    bt_color.hh
 
 FORMS += \
         mainwindow.ui
