@@ -51,7 +51,10 @@ void MainWindow::on_push_Test_2_clicked()
 
 void MainWindow::on_push_Test_3_clicked()
 {
-  _socket->write(BT_Message(1,255,255,255).ReturnMessage());
+  //BT_Message test_message_white(1,255,0,123);
+  BT_Message test;
+
+  _socket->write(test.ReturnMessage());
 }
 
 
@@ -72,7 +75,6 @@ void MainWindow::on_push_connect_clicked()
 
    static const QString serviceUuid(QStringLiteral("00001101-0000-1000-8000-00805F9B34FB"));
   _socket->connectToService(QBluetoothAddress(_device_address), QBluetoothUuid(serviceUuid), QIODevice::ReadWrite);
-  _socket->write("1,0,0,0,");
 
   deviceConnected();
 

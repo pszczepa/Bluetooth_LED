@@ -5,7 +5,6 @@
 #include <QBluetoothDeviceDiscoveryAgent>
 #include <QBluetoothSocket>
 #include <QListWidget>
-#include <QVector>
 
 #include "bt_message.hh"
 
